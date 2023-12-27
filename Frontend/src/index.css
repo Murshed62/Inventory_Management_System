@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gray-500: #6b7280;
+  --color-primary: #eeab1c;
+  --color-primary-100: #f8f2e2;
+  --color-nutral: #1f5def;
+  --color-nutral-100: #e6ecfb;
+  --color-success: #41d02e;
+  --color-success-100: #ebfbe9;
+  --color-pink: #be2edd;
+  --color-pink-100: #f8e4fc;
+  --color-error: #ee1b1b;
+  --color-error-100: #fdc4c4;
+  --color-warning: #eba01e;
+  --color-warning-100: #f4e0bf;
+}
+
+*,
+*::before,
+*::after {
+  /* Creating animations for dark mode */
+  transition: background-color 0.3s, border 0.3s;
+}
+
+html[data-theme='IMS-Dark'] {
+  --color-gray-500: #6b7280;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.active svg {
+  @apply text-primary opacity-100 duration-500;
+}
